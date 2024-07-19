@@ -1,5 +1,5 @@
 from apps import WinGet_Program
-import urls
+import get_versions
 from window import Window
 
 win = Window()
@@ -18,7 +18,7 @@ win.add_program(WinGet_Program("Oh-My-Posh", "JanDeDobbeleer.OhMyPosh", "Program
 win.add_program(WinGet_Program("PuTTY", "PuTTY.PuTTY", "Programing"))
 win.add_program(WinGet_Program("PyCharm", "JetBrains.PyCharm.Community.EAP", "Programing"))
 win.add_program(WinGet_Program("Python 2", "Python.Python.2", "Programing"))
-for version in urls.python_versions():
+for version in get_versions.python_versions():
     win.add_program(WinGet_Program(f"Python {version}", f"Python.Python.{'.'.join(version.split('.')[:2])}", "Programing"))
 win.add_program(WinGet_Program("Visual Studio", "Microsoft.VisualStudio.2022.Community", "Programing"))
 win.add_program(WinGet_Program("Visual Studio Code", "Microsoft.VisualStudioCode", "Programing"))
